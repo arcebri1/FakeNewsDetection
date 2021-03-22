@@ -1,4 +1,6 @@
 merged_data.csv
+train.csv
+data.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
