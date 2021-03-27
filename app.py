@@ -18,11 +18,6 @@ fake_news = load_data(1000)
 st.subheader('Fake News Article Data')
 st.write(fake_news)
 
-# dic = {'Fakes News':10044, 'Real News':12229}
-# keys = dic.keys()
-# values = dic.values()
-
-# plt.bar(keys, values)
 
 # fake = load_data['label'] == 0
 
@@ -42,21 +37,9 @@ source
 
 st.bar_chart(source)
 
-# alt.Chart(source).mark_bar().encode(
-#     x = 'x',
-#     y = 'y'
-# )
 
-# plt.bar(x_axis, fake_real)
 
-# amount = [5000, 10000, 15000]
-# ypos = np.arange(len(label))
-# plt.bar(ypos, amount)
+news = ['Fake', 'Real']
+amount = [10044, 12229]
 
-# st.bar_chart(fake_news['Headline'])
-
-# load_data.value_counts()
-
-# data
-
-# st.write(data)
+# st.write(news)
