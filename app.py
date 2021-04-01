@@ -4,6 +4,7 @@ import numpy as np
 import altair as alt
 import pydeck as pdk
 import matplotlib.pyplot as plt
+# import plotly.express as px
 
 
 st.title('Fake News Detection')
@@ -33,13 +34,44 @@ source = pd.DataFrame({
     'y': [10044, 12229]
 })
 
+# source = pd.DataFrame({
+#     'Fake News': [10044],
+#     'Real News': [12229]
+# })
+
 source 
 
 st.bar_chart(source)
 
+st.line_chart(source)
 
+st.area_chart(source)
+
+##############
+
+# hist_data = [source[x],source[y]]
+# group_labels = [‘Type of News’, ‘Number of News Articles’]
+# fig = ff.create_distplot(hist_data, group_labels)
+# st.plotly_chart(fig, use_container_width=True)
+
+
+st.write("""
+# Hello
+Testing out
+""")
+##Cannot have the same key for selectboxes (Select Dataset)
+#Drop-down box
+data_set=st.selectbox("Select Dataset", ("Fake News", "Real News"))
+# st.write(data_set)
+
+#side bar drop-down
+data_side=st.sidebar.selectbox("Select Data-set", ("Fake News", "Real News"))
+# st.write(data_side)
+
+classifier_name = st.sidebar.selectbox("Select Classifier", ('KNN','SVM','Random Forest'))
 
 news = ['Fake', 'Real']
 amount = [10044, 12229]
+# y_pos = np.arange(len)
 
 # st.write(news)
