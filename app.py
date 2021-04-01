@@ -49,6 +49,20 @@ st.area_chart(source)
 
 ##############
 
+source1 = pd.DataFrame({
+    'Type of Article': ['Fake News', 'Real News'],
+    'Number of Articles': [10044, 12229]
+})
+
+bar = alt.Chart(source1).mark_bar(size=30).encode(
+    x='Type of Article',
+    y='Number of Articles',
+    color=alt.Color('Number of Articles')
+).properties(width=350)
+
+st.write(bar)
+
+
 # hist_data = [source[x],source[y]]
 # group_labels = [‘Type of News’, ‘Number of News Articles’]
 # fig = ff.create_distplot(hist_data, group_labels)
@@ -69,6 +83,15 @@ data_side=st.sidebar.selectbox("Select Data-set", ("Fake News", "Real News"))
 # st.write(data_side)
 
 classifier_name = st.sidebar.selectbox("Select Classifier", ('KNN','SVM','Random Forest'))
+
+
+
+# def get_dataset(data_side):
+#     if data_side == "Fake News":
+#         data = datasets.load_fake_news()
+#     elif data_side == "Real News":
+#         data = datasets.load_real_news()
+#     else:
 
 news = ['Fake', 'Real']
 amount = [10044, 12229]
